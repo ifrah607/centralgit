@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    
+    <style>
+body {
+  background-color: #eee;
+}
+.hello {
+  opacity: 1 !important;
+}
+.full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+}
+.full .content {
+  background-color: rgba(0,0,0,0) !important;
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+.full .content img {
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  animation: zoomin 1s ease;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+.byebye {
+  opacity: 0;
+}
+.byebye:hover {
+  transform: scale(0.9) !important;
+}
+.gallery {
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 8px;
+}
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 3px #333;
+  transition: all 1.5s ease;
+}
+.gallery img:hover {
+  box-shadow: 0 0 32px #333;
+}
+.gallery .content {
+  padding: 4px;
+}
+.gallery .gallery-item {
+  transition: grid-row-start 300ms linear;
+  transition: transform 300ms ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.gallery .gallery-item:hover {
+  transform: scale(1.025);
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+@-moz-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+
+
+ 
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery__column">
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="data:image/jpeg;base64,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" alt="Portrait by Jessica Felicio" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Jessica Felicio</figcaption>
+                </figure>
+            </a>
+    
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/7747e25e-4a1c-47ee-896c-514f0b4d6cf9/custom-nike-air-force-1-low-by-you.png" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Oladimeji Odunsi</figcaption>
+                </figure>
+            </a>
+    
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/7fbc5e94-8d49-4730-a280-f19d3cfad0b0/custom-nike-air-max-90-by-you.png" alt="Portrait by Alex Perez" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Alex Perez</figcaption>
+                </figure>
+            </a>
+        </div>
+        
+        <div class="gallery__column">
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.nike.com/a/images/t_default/2016a636-2953-41b4-b496-55263f2b26bc/air-jordan-1-mid-shoes-X5pM09.png" alt="Portrait by Noah Buscher" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Noah Buscher</figcaption>
+                </figure>
+            </a>
+            
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.shiekh.com/media/catalog/product/cache/thumbnail/360x360/beff4985b56e3afdbeabfc89641a4582/s/h/shk2894905_one_r_1001.jpg" alt="Portrait by Ivana Cajina" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Ivana Cajina</figcaption>
+                </figure>
+            </a>
+    
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/597481c6-05ea-4b1a-86c2-ff798c592863/air-huarache-premium-mens-shoes-JppwBb.png" alt="Portrait by Sam Burriss" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Sam Burriss</figcaption>
+                </figure>
+            </a>
+        </div>
+        
+        <div class="gallery__column">
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.nike.com/a/images/t_default/445f83ed-9c01-4af8-bd2c-9127001afc47/air-max-270-womens-shoes-Pgb94t.png" alt="Portrait by Mari Lezhava" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Mari Lezhava</figcaption>
+                </figure>
+            </a>
+            
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://media.gq.com/photos/62fd35143f91baeb482811d2/master/w_1600%2Cc_limit/GQ0922_Nike_59.jpg" alt="Portrait by Ethan Haddox" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Ethan Haddox</figcaption>
+                </figure>
+            </a>
+    
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/e4778205-8aca-4fda-b372-3854783c25de/lebron-9-low-mens-shoes-flHVJd.png" alt="Portrait by Amir Geshani" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Amir Geshani</figcaption>
+                </figure>
+            </a>
+        </div>
+        
+        <div class="gallery__column">
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.nike.com/a/images/f_auto,cs_srgb/w_1536,c_limit/2148e485-f33c-4cb1-ac6c-79a37aca28b2/men-s-shoes-clothing-accessories.png" alt="Portrait by Guilian Fremaux" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Guilian Fremaux</figcaption>
+                </figure>
+            </a>
+    
+            <a href="https://unsplash.com/@majestical_jasmin" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://www.scottsdalegolf.co.uk/uploads/medium/nikeSS21-CK6483%20024-3.jpg" alt="Portrait by Jasmin Chew" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Jasmin Chew</figcaption>
+                </figure>
+            </a>
+            
+            <a href="https://www.bata.com.pk/collections/men-sneakers" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/78e78695-74ab-4162-b052-67f004aad13b/air-max-270-g-golf-shoe-GVHWZK.png" alt="Portrait by Dima DallAcqua" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Dima DallAcqua</figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
